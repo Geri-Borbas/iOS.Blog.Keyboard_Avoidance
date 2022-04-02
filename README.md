@@ -1,19 +1,23 @@
-//
-//  ViewController.swift
-//  Keyboard_Avoidance
-//
-//  Created by Geri Borbás on 02/04/2022.
-//
+#  Keyboard Avoidance
 
-import UIKit
+Keyboard avoidance in ✌️ 2 lines of code. Animate to text fields (or any responder), swipe down keyboard dismissal for free.
+
+> More streamlined examples soon.
 
 
+## How
+
+1. Put everything in a scroll view.
+2. Pin the bottom of the scroll view to the top of the `keyboardLayoutGuide`.
+3. Set `keyboardDismissMode` to `.onDrag`.
+
+```Swift
 class ViewController: UIViewController {
 
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .systemBackground
-		
+        
         // Views.
         let titleLabel = UILabel()
         titleLabel.text = "Sign Up"
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
         let lastNameTextField = UITextField()
         lastNameTextField.placeholder = "Last Name"
         
-		let stack = UIStackView()
+        let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
         stack.addArrangedSubview(titleLabel)
@@ -68,23 +72,11 @@ class ViewController: UIViewController {
         
         // Vertical scrolling.
         stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: 0).isActive = true
-	}
-}
-
-
-class WireframeView: UIView {
-    
-    override func draw(_ rect: CGRect) {
-        
-        let frame = UIBezierPath(rect: rect)
-        let x = UIBezierPath()
-        x.move(to: .init(x: rect.minX, y: rect.minY))
-        x.addLine(to: .init(x: rect.maxX, y: rect.maxY))
-        x.move(to: .init(x: rect.minX, y: rect.maxY))
-        x.addLine(to: .init(x: rect.maxX, y: rect.minY))
-        
-        UIColor.label.setStroke()
-        frame.stroke()
-        x.stroke()
     }
 }
+```
+
+
+## License
+
+> Licensed under the [**MIT License**](https://en.wikipedia.org/wiki/MIT_License).
