@@ -47,12 +47,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		552B6B9C27FDF0BF00DC0229 /* Goal */ = {
+		552B6B9C27FDF0BF00DC0229 /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
 				552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */,
+				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
+				5512A85327F8D3D700B0829D /* WireframeView.swift */,
 			);
-			path = Goal;
+			path = Prototypes;
+			sourceTree = "<group>";
+		};
+		552B6B9D27FE0EF200DC0229 /* KeyboardLayoutGuide */ = {
+			isa = PBXGroup;
+			children = (
+				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
+				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
+			);
+			path = KeyboardLayoutGuide;
 			sourceTree = "<group>";
 		};
 		555F90C427F855990075798F = {
@@ -79,11 +90,8 @@
 				555F90D027F855990075798F /* AppDelegate.swift */,
 				555F90D227F855990075798F /* SceneDelegate.swift */,
 				555F90D427F855990075798F /* ViewController.swift */,
-				552B6B9C27FDF0BF00DC0229 /* Goal */,
-				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
-				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
-				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
-				5512A85327F8D3D700B0829D /* WireframeView.swift */,
+				552B6B9D27FE0EF200DC0229 /* KeyboardLayoutGuide */,
+				552B6B9C27FDF0BF00DC0229 /* Prototypes */,
 				555F90D927F855A20075798F /* Assets.xcassets */,
 				555F90DB27F855A20075798F /* LaunchScreen.storyboard */,
 				555F90DE27F855A20075798F /* Info.plist */,
