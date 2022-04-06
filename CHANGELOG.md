@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 0.0.5
+
+    + Added `KeyboardNotificationsViewController`
+
 * 0.0.4
 
     + Initial layout when `window` becomes key (safe area guides are set by that time)  

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512A85327F8D3D700B0829D /* WireframeView.swift */; };
 		55134BB127FA1E5F003CD09C /* OrientationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */; };
+		552B6B9B27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */; };
 		555F90D127F855990075798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D027F855990075798F /* AppDelegate.swift */; };
 		555F90D327F855990075798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D227F855990075798F /* SceneDelegate.swift */; };
 		555F90D527F855990075798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D427F855990075798F /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		5512A85327F8D3D700B0829D /* WireframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeView.swift; sourceTree = "<group>"; };
 		55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationListenerViewController.swift; sourceTree = "<group>"; };
+		552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationsViewController.swift; sourceTree = "<group>"; };
 		555F90CD27F855990075798F /* Keyboard_Avoidance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_Avoidance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555F90D027F855990075798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555F90D227F855990075798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		552B6B9C27FDF0BF00DC0229 /* Goal */ = {
+			isa = PBXGroup;
+			children = (
+				552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */,
+			);
+			path = Goal;
+			sourceTree = "<group>";
+		};
 		555F90C427F855990075798F = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 				555F90D027F855990075798F /* AppDelegate.swift */,
 				555F90D227F855990075798F /* SceneDelegate.swift */,
 				555F90D427F855990075798F /* ViewController.swift */,
+				552B6B9C27FDF0BF00DC0229 /* Goal */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
 				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
@@ -156,6 +167,7 @@
 				55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */,
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,
+				552B6B9B27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift in Sources */,
 				5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
