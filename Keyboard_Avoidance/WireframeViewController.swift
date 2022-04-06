@@ -29,6 +29,9 @@ class WireframeViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(firstNameTextField)
         view.addSubview(wireframe)
         
+        // Use this to ignore bottom safe area (in `keyboardLayoutGuide` as well).
+        // view.insetsLayoutMarginsFromSafeArea = false
+        
         // Constraints.
         wireframe.translatesAutoresizingMaskIntoConstraints = false
         wireframe.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true

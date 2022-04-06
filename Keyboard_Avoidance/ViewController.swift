@@ -9,11 +9,11 @@ import UIKit
 
 
 class ViewController: UIViewController, UITextFieldDelegate {
-
-	override func viewDidLoad() {
-		super.viewDidLoad()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         view.backgroundColor = .systemBackground
-		
+        
         // Views.
         let titleLabel = UILabel()
         titleLabel.text = "Sign Up"
@@ -28,12 +28,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         firstNameTextField.returnKeyType = .done
         firstNameTextField.delegate = self
         
-		let stack = UIStackView()
+        let stack = UIStackView()
         stack.axis = .vertical
         stack.spacing = 10
-        stack.addArrangedSubview(titleLabel)
         stack.addArrangedSubview(firstNameTextField)
         stack.addArrangedSubview(lastNameTextField)
+        stack.addArrangedSubview(titleLabel)
         
         let wireframe = WireframeView()
         wireframe.backgroundColor = .clear
@@ -52,10 +52,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Constraints.
         scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: -5).isActive = true
-        scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 5).isActive = true
-        scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 5).isActive = true
+        scrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: 0).isActive = true
+        scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
         
         wireframe.translatesAutoresizingMaskIntoConstraints = false
         wireframe.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         // Vertical scrolling.
         stack.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: 0).isActive = true
-	}
+    }
     
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

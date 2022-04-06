@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512A85327F8D3D700B0829D /* WireframeView.swift */; };
+		55134BB127FA1E5F003CD09C /* OrientationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */; };
 		555F90D127F855990075798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D027F855990075798F /* AppDelegate.swift */; };
 		555F90D327F855990075798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D227F855990075798F /* SceneDelegate.swift */; };
 		555F90D527F855990075798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D427F855990075798F /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		5512A85327F8D3D700B0829D /* WireframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeView.swift; sourceTree = "<group>"; };
+		55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationListenerViewController.swift; sourceTree = "<group>"; };
 		555F90CD27F855990075798F /* Keyboard_Avoidance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_Avoidance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555F90D027F855990075798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555F90D227F855990075798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +31,7 @@
 		555F90DE27F855A20075798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555F90E427F868060075798F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeViewController.swift; sourceTree = "<group>"; };
+		55FD29DA27FD966B00AC7BCB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				555F90E427F868060075798F /* README.md */,
+				55FD29DA27FD966B00AC7BCB /* CHANGELOG.md */,
 				555F90CF27F855990075798F /* Keyboard_Avoidance */,
 				555F90CE27F855990075798F /* Products */,
 			);
@@ -67,6 +71,7 @@
 				555F90D427F855990075798F /* ViewController.swift */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
+				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
 				5512A85327F8D3D700B0829D /* WireframeView.swift */,
 				555F90D927F855A20075798F /* Assets.xcassets */,
 				555F90DB27F855A20075798F /* LaunchScreen.storyboard */,
@@ -145,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55134BB127FA1E5F003CD09C /* OrientationListenerViewController.swift in Sources */,
 				55C02C0D27F91FD900BA6322 /* KeyboardLayoutGuide.swift in Sources */,
 				555F90D527F855990075798F /* ViewController.swift in Sources */,
 				55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */,
