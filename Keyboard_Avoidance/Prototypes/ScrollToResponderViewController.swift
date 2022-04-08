@@ -19,26 +19,26 @@ class ScrollToResponderViewController: UIViewController {
     lazy var firstNameTextField = UITextField()
         .withFormStyle(
             placeholder: "first name",
-            imageName: "envelope"
+            imageName: "person.crop.circle"
         )
     
     lazy var lastNameTextField = UITextField()
         .withFormStyle(
             placeholder: "last name",
-            imageName: "envelope"
+            imageName: "equal.square"
         )
     
     lazy var passwordTextField = UITextField()
         .withFormStyle(
             placeholder: "password",
-            imageName: "envelope"
+            imageName: "lock"
         )
         .with {
             $0.isSecureTextEntry = true
         }
     
     lazy var textFields = UIStackView()
-        .vertical(spacing: 10)
+        .vertical(spacing: 5)
         .views(
             emailTextField,
             firstNameTextField,
@@ -70,7 +70,7 @@ class ScrollToResponderViewController: UIViewController {
                     UIButton()
                         .with(title: "1")
                         .onTouchUpInside { [unowned self] in
-                            self.emailTextField.becomeFirstResponder()
+                            self.emailTextField.toggleFirstResponder()
                         }
                         .withConstraints {
                             $0.set(width: 50)
@@ -78,7 +78,7 @@ class ScrollToResponderViewController: UIViewController {
                     UIButton()
                         .with(title: "2")
                         .onTouchUpInside { [unowned self] in
-                            self.firstNameTextField.becomeFirstResponder()
+                            self.firstNameTextField.toggleFirstResponder()
                         }
                         .withConstraints {
                             $0.set(width: 50)
@@ -86,7 +86,7 @@ class ScrollToResponderViewController: UIViewController {
                     UIButton()
                         .with(title: "3")
                         .onTouchUpInside { [unowned self] in
-                            self.lastNameTextField.becomeFirstResponder()
+                            self.lastNameTextField.toggleFirstResponder()
                         }
                         .withConstraints {
                             $0.set(width: 50)
@@ -94,7 +94,7 @@ class ScrollToResponderViewController: UIViewController {
                     UIButton()
                         .with(title: "4")
                         .onTouchUpInside { [unowned self] in
-                            self.passwordTextField.becomeFirstResponder()
+                            self.passwordTextField.toggleFirstResponder()
                         }
                         .withConstraints {
                             $0.set(width: 50)

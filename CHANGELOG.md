@@ -1,8 +1,9 @@
 # CHANGELOG
 
-* 0.0.10
+* 0.0.10 - 0.0.11
 
     + Extracted `UITextField` styles to `UI`
+    + Added color styles
 
 * 0.0.8 - 0.0.9
 
