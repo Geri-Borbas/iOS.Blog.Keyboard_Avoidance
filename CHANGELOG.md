@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* 0.0.10
+
+    + Extracted `UITextField` styles to `UI`
+
 * 0.0.8 - 0.0.9
 
     + Added `ScrollToResponderViewController`

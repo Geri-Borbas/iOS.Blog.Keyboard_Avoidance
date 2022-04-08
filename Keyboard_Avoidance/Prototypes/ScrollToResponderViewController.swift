@@ -9,102 +9,32 @@ import UIKit
 
 
 class ScrollToResponderViewController: UIViewController {
-    
-    let textFieldDelegate = TextFieldDelegate(
-        onBeginEditing: {
-            $0.backgroundColor = .white
-            ($0.rightView as? UIButton)?.imageView?.tintColor = .systemBlue
-        },
-        onEndEditing: {
-            $0.backgroundColor = .gray
-            ($0.rightView as? UIButton)?.imageView?.tintColor = .gray
-        },
-        onReturn: {
-            $0.resignFirstResponder()
-        }
-    )
-    
+        
     lazy var emailTextField = UITextField()
-        .with {
-            $0.placeholder = "email"
-            $0.returnKeyType = .done
-            $0.delegate = self.textFieldDelegate
-        }
-        .withConstraints {
-            $0.set(height: 40)
-        }
+        .withFormStyle(
+            placeholder: "email",
+            imageName: "envelope"
+        )
     
     lazy var firstNameTextField = UITextField()
-        .with {
-            $0.attributedPlaceholder = NSAttributedString(
-                string: "first name",
-                attributes: [
-                    .foregroundColor : UIColor.black
-                ]
-            )
-            $0.font = UIFont.rounded(size: 20)
-            $0.textColor = .white
-            $0.backgroundColor = .gray
-            $0.layer.cornerRadius = 10
-            $0.leftView = UIView()
-                .with {
-                    $0.isUserInteractionEnabled = false
-                }
-                .withConstraints {
-                    $0.set(width: 20)
-                    $0.set(height: 20)
-                    
-                }
-            $0.leftViewMode = .always
-            let textField = $0
-            $0.rightView = UIButton(type: .custom)
-                .with {
-                    $0.setImage(
-                        UIImage(
-                            systemName: "envelope",
-                            withConfiguration: UIImage.SymbolConfiguration(
-                                pointSize: 30,
-                                weight: .regular
-                            )
-                        ),
-                        for: .normal
-                    )
-                    $0.backgroundColor = .green
-                    $0.imageView?.backgroundColor = .orange
-                }
-                .withConstraints {
-                    $0.set(width: 10 + 56)
-                    $0.set(height: 56)
-                }
-                .onTouchUpInside {
-                    textField.toggleFirstResponder()
-                }
-            $0.rightViewMode = .always
-            $0.delegate = self.textFieldDelegate
-        }
-        .withConstraints {
-            $0.set(height: 56)
-        }
+        .withFormStyle(
+            placeholder: "first name",
+            imageName: "envelope"
+        )
     
     lazy var lastNameTextField = UITextField()
-        .with {
-            $0.placeholder = "last name"
-            $0.returnKeyType = .done
-            $0.delegate = self.textFieldDelegate
-        }
-        .withConstraints {
-            $0.set(height: 40)
-        }
+        .withFormStyle(
+            placeholder: "last name",
+            imageName: "envelope"
+        )
     
     lazy var passwordTextField = UITextField()
+        .withFormStyle(
+            placeholder: "password",
+            imageName: "envelope"
+        )
         .with {
-            $0.placeholder = "password"
             $0.isSecureTextEntry = true
-            $0.returnKeyType = .done
-            $0.delegate = self.textFieldDelegate
-        }
-        .withConstraints {
-            $0.set(height: 40)
         }
     
     lazy var textFields = UIStackView()
