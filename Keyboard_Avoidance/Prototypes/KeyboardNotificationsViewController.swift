@@ -69,7 +69,6 @@ class KeyboardNotificationsViewController: UIViewController, UITextFieldDelegate
         return true
     }
     
-    
     @objc private func keyboardWillChangeFrame(_ notification: NSNotification) {
         
         // Unwrap notification objects.
