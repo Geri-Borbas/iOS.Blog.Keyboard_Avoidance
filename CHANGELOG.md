@@ -1,8 +1,10 @@
 # CHANGELOG
 
-* 0.0.8
+* 0.0.8 - 0.0.9
 
+    + Added `ScrollToResponderViewController`
     + Added Declarative UIKit extensions
+    + Added composable `TextFieldDelegate`
 
 * 0.0.5 - 0.0.6
 

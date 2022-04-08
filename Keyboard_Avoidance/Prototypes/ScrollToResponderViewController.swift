@@ -9,12 +9,26 @@ import UIKit
 
 
 class ScrollToResponderViewController: UIViewController {
-
+    
+    let textFieldDelegate = TextFieldDelegate(
+        onBeginEditing: {
+            $0.backgroundColor = .white
+            ($0.rightView as? UIButton)?.imageView?.tintColor = .systemBlue
+        },
+        onEndEditing: {
+            $0.backgroundColor = .gray
+            ($0.rightView as? UIButton)?.imageView?.tintColor = .gray
+        },
+        onReturn: {
+            $0.resignFirstResponder()
+        }
+    )
+    
     lazy var emailTextField = UITextField()
         .with {
             $0.placeholder = "email"
             $0.returnKeyType = .done
-            $0.delegate = self
+            $0.delegate = self.textFieldDelegate
         }
         .withConstraints {
             $0.set(height: 40)
@@ -66,7 +80,7 @@ class ScrollToResponderViewController: UIViewController {
                     textField.toggleFirstResponder()
                 }
             $0.rightViewMode = .always
-            $0.delegate = self
+            $0.delegate = self.textFieldDelegate
         }
         .withConstraints {
             $0.set(height: 56)
@@ -76,7 +90,7 @@ class ScrollToResponderViewController: UIViewController {
         .with {
             $0.placeholder = "last name"
             $0.returnKeyType = .done
-            $0.delegate = self
+            $0.delegate = self.textFieldDelegate
         }
         .withConstraints {
             $0.set(height: 40)
@@ -87,7 +101,7 @@ class ScrollToResponderViewController: UIViewController {
             $0.placeholder = "password"
             $0.isSecureTextEntry = true
             $0.returnKeyType = .done
-            $0.delegate = self
+            $0.delegate = self.textFieldDelegate
         }
         .withConstraints {
             $0.set(height: 40)
@@ -156,7 +170,10 @@ class ScrollToResponderViewController: UIViewController {
                             $0.set(width: 50)
                         },
                     UIView.spacer
-                ),
+                )
+                .with {
+                    $0.distribution = .fillEqually
+                },
             UIView.spacer
         )
         .withConstraints {
@@ -168,66 +185,6 @@ class ScrollToResponderViewController: UIViewController {
         scrollView.addSubview(textFields)
         view.addSubview(body)
         view.backgroundColor = .systemBackground
-    }
-}
-
-
-extension ScrollToResponderViewController: UITextFieldDelegate {
-        
-    @objc func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        print("\(Self.self).\(#function)")
-        textField.backgroundColor = .white
-        (textField.rightView as? UIButton)?.imageView?.tintColor = .systemBlue
-        return true
-    }
-    
-    @objc func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        print("\(Self.self).\(#function)")
-        textField.backgroundColor = .gray
-        (textField.rightView as? UIButton)?.imageView?.tintColor = .gray
-        return true
-    }
-    
-    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("\(Self.self).\(#function)")
-        textField.resignFirstResponder()
-        return true
-    }
-}
-
-
-class TextFieldDelegate: NSObject, UITextFieldDelegate {
-    
-    typealias TextFieldAction = (_ textField: UITextField) -> Void
-    
-    var onBeginEditing: TextFieldAction?
-    var onEndEditing: TextFieldAction?
-    
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        onBeginEditing?(textField)
-        return true
-    }
-    
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        onEndEditing?(textField)
-        return true
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-}
-
-
-extension UIResponder {
-    
-    func toggleFirstResponder() {
-        if isFirstResponder {
-            resignFirstResponder()
-        } else {
-            becomeFirstResponder()
-        }
     }
 }
 
