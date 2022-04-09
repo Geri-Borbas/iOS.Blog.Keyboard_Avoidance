@@ -3,6 +3,7 @@
 //  Keyboard_Avoidance
 //
 //  Created by Geri Borbás on 08/04/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
@@ -21,96 +22,15 @@ struct UI {
         static let background = UIColor.init(named: "Background") ?? .notFound
         static let blue = UIColor.systemBlue
     }
+    
+    struct Asset {
+        
+        static let square = UIImage(named: "Square") ?? UIImage()
+    }
 }
 
 
 extension UIColor {
     
     static let notFound = UIColor.magenta
-}
-
-
-extension UITextField {
-    
-    func withFormStyle(placeholder: String, imageName: String) -> Self {
-        with {
-            $0.attributedPlaceholder = NSAttributedString(
-                string: placeholder,
-                attributes: [
-                    .foregroundColor : UI.Color.middleGray
-                ]
-            )
-            $0.font = UIFont.rounded(size: 20)
-            $0.textColor = UI.Color.label
-            $0.backgroundColor = UI.Color.deepGray
-            $0.layer.cornerRadius = 10
-            $0.leftView = UIView()
-                .with {
-                    $0.isUserInteractionEnabled = false
-                }
-                .withConstraints {
-                    $0.set(width: 20)
-                    $0.set(height: 20)
-                    
-                }
-            $0.leftViewMode = .always
-            let textField = $0
-            $0.rightView = UIButton(type: .custom)
-                .with {
-                    $0.setImage(
-                        UIImage(
-                            systemName: imageName,
-                            withConfiguration: UIImage.SymbolConfiguration(
-                                pointSize: 30,
-                                weight: .regular
-                            )
-                        ),
-                        for: .normal
-                    )
-                    $0.imageView?.tintColor = UI.Color.middleGray
-                }
-                .withConstraints {
-                    $0.set(width: 10 + 56)
-                    $0.set(height: 56)
-                }
-                .onTouchUpInside {
-                    textField.toggleFirstResponder()
-                }
-            $0.rightViewMode = .always
-            $0.delegate = TextFieldDelegate.withFormStyle
-        }
-        .withConstraints {
-            $0.set(height: 56)
-        }
-    }
-}
-
-
-extension TextFieldDelegate {
-    
-    static let withFormStyle = TextFieldDelegate(
-        onBeginEditing: {
-            $0.backgroundColor = UI.Color.darkGray
-            ($0.rightView as? UIButton)?.imageView?.tintColor = UI.Color.blue
-            $0.attributedPlaceholder = NSAttributedString(
-                string: $0.placeholder ?? "",
-                attributes: [
-                    .foregroundColor : UI.Color.brightGray
-                ]
-            )
-        },
-        onEndEditing: {
-            $0.backgroundColor = UI.Color.deepGray
-            ($0.rightView as? UIButton)?.imageView?.tintColor = UI.Color.middleGray
-            $0.attributedPlaceholder = NSAttributedString(
-                string: $0.placeholder ?? "",
-                attributes: [
-                    .foregroundColor : UI.Color.middleGray
-                ]
-            )
-        },
-        onReturn: {
-            $0.resignFirstResponder()
-        }
-    )
 }

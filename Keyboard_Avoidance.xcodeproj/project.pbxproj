@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5504374A2801013B0006E775 /* UITextField+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550437492801013B0006E775 /* UITextField+Styles.swift */; };
+		5504374B280110EF0006E775 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A97B227FFB221004C8FC7 /* NSObject+Extensions.swift */; };
 		5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512A85327F8D3D700B0829D /* WireframeView.swift */; };
 		55134BB127FA1E5F003CD09C /* OrientationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */; };
 		5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522D7162800C07A008150D2 /* UIFont+Extensions.swift */; };
@@ -29,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550437492801013B0006E775 /* UITextField+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Styles.swift"; sourceTree = "<group>"; };
 		5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuide.swift; sourceTree = "<group>"; };
 		5512A85327F8D3D700B0829D /* WireframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeView.swift; sourceTree = "<group>"; };
 		55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationListenerViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				5522D71D2800CCD6008150D2 /* UI.swift */,
+				550437492801013B0006E775 /* UITextField+Styles.swift */,
+				558C664127FE6551000A5736 /* UIButton+Styles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,7 +143,6 @@
 			children = (
 				554A97B227FFB221004C8FC7 /* NSObject+Extensions.swift */,
 				558C664327FE6553000A5736 /* UIButton+Extensions.swift */,
-				558C664127FE6551000A5736 /* UIButton+Styles.swift */,
 				558C664227FE6552000A5736 /* UIKit+Extensions.swift */,
 				558C664427FE6554000A5736 /* UIView+Constraints.swift */,
 				558C664527FE6554000A5736 /* Withable.swift */,
@@ -221,6 +225,7 @@
 				5522D71B2800CB26008150D2 /* UIResponder+Extensions.swift in Sources */,
 				55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */,
 				558C664927FE6554000A5736 /* UIView+Constraints.swift in Sources */,
+				5504374A2801013B0006E775 /* UITextField+Styles.swift in Sources */,
 				558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */,
 				5522D71E2800CCD6008150D2 /* UI.swift in Sources */,
 				558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */,
@@ -232,6 +237,7 @@
 				558C664727FE6554000A5736 /* UIKit+Extensions.swift in Sources */,
 				558C664827FE6554000A5736 /* UIButton+Extensions.swift in Sources */,
 				558C664A27FE6554000A5736 /* Withable.swift in Sources */,
+				5504374B280110EF0006E775 /* NSObject+Extensions.swift in Sources */,
 				5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

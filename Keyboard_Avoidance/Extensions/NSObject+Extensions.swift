@@ -3,6 +3,7 @@
 //  Keyboard_Avoidance
 //
 //  Created by Geri Borbás on 08/04/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import Foundation
@@ -26,19 +27,19 @@ extension NSObject {
         }
     }
     
-    func associate(value: Any?, for key: AnyHashable) {
-        if let value = value {
-            associatedObjects[key] = value
+    func set(associatedObject: Any?, for key: AnyHashable) {
+        if let associatedObject = associatedObject {
+            associatedObjects[key] = associatedObject
         } else {
-            dissociate(valueFor: key)
+            remove(associatedObjectFor: key)
         }
     }
     
-    func assodiatedValue(for key: AnyHashable) -> Any? {
-        associatedObjects[key]
+    func remove(associatedObjectFor key: AnyHashable) {
+        associatedObjects.removeObject(forKey: key)
     }
     
-    func dissociate(valueFor key: AnyHashable) {
-        associatedObjects.removeObject(forKey: key)
+    func associatedObject(for key: AnyHashable) -> Any? {
+        associatedObjects[key]
     }
 }

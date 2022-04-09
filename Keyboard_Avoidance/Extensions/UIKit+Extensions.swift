@@ -3,6 +3,7 @@
 //  Half Modal
 //
 //  Created by Geri Borbás on 30/03/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
@@ -58,13 +59,15 @@ extension UIView {
     }
     
     @discardableResult func set(height: CGFloat) -> NSLayoutConstraint {
-        heightAnchor.constraint(equalToConstant: height).with {
+        translatesAutoresizingMaskIntoConstraints = false
+        return heightAnchor.constraint(equalToConstant: height).with {
             $0.isActive = true
         }
     }
     
     @discardableResult func set(width: CGFloat) -> NSLayoutConstraint {
-        widthAnchor.constraint(equalToConstant: width).with {
+        translatesAutoresizingMaskIntoConstraints = false
+        return widthAnchor.constraint(equalToConstant: width).with {
             $0.isActive = true
         }
     }

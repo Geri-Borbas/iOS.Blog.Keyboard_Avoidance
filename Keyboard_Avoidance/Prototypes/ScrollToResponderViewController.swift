@@ -3,29 +3,37 @@
 //  Keyboard_Avoidance
 //
 //  Created by Geri Borbás on 07/04/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
 
 
 class ScrollToResponderViewController: UIViewController {
-        
+    
     lazy var emailTextField = UITextField()
         .withFormStyle(
             placeholder: "email",
-            imageName: "envelope"
+            imageName: "envelope",
+            next: firstNameTextField
         )
+        .with {
+            $0.keyboardType = .emailAddress
+            $0.autocapitalizationType = .none
+        }
     
     lazy var firstNameTextField = UITextField()
         .withFormStyle(
             placeholder: "first name",
-            imageName: "person.crop.circle"
+            imageName: "person.crop.circle",
+            next: lastNameTextField
         )
     
     lazy var lastNameTextField = UITextField()
         .withFormStyle(
             placeholder: "last name",
-            imageName: "equal.square"
+            imageName: "equal.square",
+            next: passwordTextField
         )
     
     lazy var passwordTextField = UITextField()
@@ -45,74 +53,67 @@ class ScrollToResponderViewController: UIViewController {
             lastNameTextField,
             passwordTextField
         )
-        .withConstraints {
-            $0.pin(to: self.scrollView, insets: .zero)
-            $0.widthAnchor.constraint(equalTo: self.scrollView.widthAnchor, constant: 0).isActive = true
-        }
     
-    lazy var scrollView = UIScrollView()
+    lazy var wrappedScrollView = UIView()
         .with {
-            $0.clipsToBounds = false
-            $0.backgroundColor = .orange
+            $0.addSubview(
+                UIScrollView()
+                    .withBorderedStyle
+                    .with {
+                        $0.addSubview(textFields)
+                    }
+                    .onMoveToSuperview {
+                        $0.pin(to: $1)
+                        self.textFields.pin(to: $0, insets: .init(top: 0, left: 10, bottom: 0, right: 10))
+                        self.textFields.widthAnchor.constraint(equalTo: $0.widthAnchor, constant: -20).isActive = true
+                    }
+            )
+            $0.addSubview(
+                UIView()
+                    .with {
+                        $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
+                    }
+                    .onMoveToSuperview {
+                        $0.set(height: 500)
+                        $0.topAnchor.constraint(equalTo: $1.bottomAnchor).isActive = true
+                        $0.leftAnchor.constraint(equalTo: $1.leftAnchor).isActive = true
+                        $0.rightAnchor.constraint(equalTo: $1.rightAnchor).isActive = true
+                    }
+            )
+            $0.addSubview(
+                UIView()
+                    .with {
+                        $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
+                    }
+                    .onMoveToSuperview {
+                        $0.set(height: 500)
+                        $0.bottomAnchor.constraint(equalTo: $1.topAnchor).isActive = true
+                        $0.leftAnchor.constraint(equalTo: $1.leftAnchor).isActive = true
+                        $0.rightAnchor.constraint(equalTo: $1.rightAnchor).isActive = true
+                    }
+            )
         }
-        .withConstraints {
-            $0.set(height: 100)
+        .onMoveToSuperview {
+            $0.set(height: 160) // 10 + 56 + 5 + 56 + 5 + 56 / 2
+            // $0.set(height: 259) // 10 + 56 + 5 + 56 + 5 + 56 + 5 + 56 + 10
         }
     
     lazy var body = UIStackView()
         .vertical(spacing: 10)
         .views(
-            scrollView,
-            UIStackView()
-                .horizontal(spacing: 10)
-                .views(
-                    UIView.spacer,
-                    UIButton()
-                        .with(title: "1")
-                        .onTouchUpInside { [unowned self] in
-                            self.emailTextField.toggleFirstResponder()
-                        }
-                        .withConstraints {
-                            $0.set(width: 50)
-                        },
-                    UIButton()
-                        .with(title: "2")
-                        .onTouchUpInside { [unowned self] in
-                            self.firstNameTextField.toggleFirstResponder()
-                        }
-                        .withConstraints {
-                            $0.set(width: 50)
-                        },
-                    UIButton()
-                        .with(title: "3")
-                        .onTouchUpInside { [unowned self] in
-                            self.lastNameTextField.toggleFirstResponder()
-                        }
-                        .withConstraints {
-                            $0.set(width: 50)
-                        },
-                    UIButton()
-                        .with(title: "4")
-                        .onTouchUpInside { [unowned self] in
-                            self.passwordTextField.toggleFirstResponder()
-                        }
-                        .withConstraints {
-                            $0.set(width: 50)
-                        },
-                    UIView.spacer
-                )
-                .with {
-                    $0.distribution = .fillEqually
+            UIView()
+                .onMoveToSuperview {
+                    $0.set(height: 89) // 56 + 5 + 56 / 2
                 },
+            wrappedScrollView,
             UIView.spacer
         )
-        .withConstraints {
+        .onMoveToSuperview {
             $0.pin(to: self.view.safeAreaLayoutGuide, insets: .padding)
         }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.addSubview(textFields)
         view.addSubview(body)
         view.backgroundColor = .systemBackground
     }
@@ -122,4 +123,18 @@ class ScrollToResponderViewController: UIViewController {
 extension UIEdgeInsets {
     
     static let padding = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+}
+
+
+extension UIScrollView {
+    
+    var withBorderedStyle: Self {
+        with {
+            $0.contentInset = .init(top: 10, left: 0, bottom: 10, right: 0)
+            $0.layer.borderColor = UI.Color.label.withAlphaComponent(0.5).cgColor
+            $0.layer.cornerRadius = 4
+            $0.layer.borderWidth = 1
+            $0.clipsToBounds = false
+        }
+    }
 }

@@ -3,6 +3,7 @@
 //  Keyboard_Avoidance
 //
 //  Created by Geri Borbás on 08/04/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
@@ -28,19 +29,16 @@ class TextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         onBeginEditing?(textField)
-        print("\(Self.self).\(#function)")
         return true
     }
     
     func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         onEndEditing?(textField)
-        print("\(Self.self).\(#function)")
         return true
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         onReturn?(textField)
-        print("\(Self.self).\(#function)")
         return true
     }
 }

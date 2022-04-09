@@ -3,6 +3,7 @@
 //  Half Modal
 //
 //  Created by Geri Borbás on 30/03/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
@@ -12,17 +13,12 @@ extension UIButton {
     
     typealias Action = () -> Void
     
-    struct Keys {
-        static var action: UInt8 = 0
-    }
-    
-    /// An attributed string property to cache typography even when the label text is empty.
     var action: Action? {
         get {
-            objc_getAssociatedObject(self, &Keys.action) as? Action
+            associatedObject(for: "touchUpInsideAction") as? Action
         }
         set {
-            objc_setAssociatedObject(self, &Keys.action, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            set(associatedObject: newValue, for: "touchUpInsideAction")
         }
     }
     

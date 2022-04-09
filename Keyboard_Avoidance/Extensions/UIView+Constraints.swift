@@ -3,6 +3,7 @@
 //  Half Modal
 //
 //  Created by Geri Borbás on 31/03/2022.
+//  http://www.twitter.com/Geri_Borbas
 //
 
 import UIKit
@@ -16,12 +17,12 @@ extension UIView {
     /// The `onMoveToSuperview` closure will be called once, right after this view called its
     /// `didMoveToSuperView()`. Suitable place to add constraints to this view instance.
     /// See https://developer.apple.com/documentation/uikit/uiview/1622512-updateconstraints
-    @discardableResult func withConstraints(_ onMoveToSuperview: @escaping ViewAction) -> Self {
+    @discardableResult func onMoveToSuperview(_ onMoveToSuperview: @escaping ViewAction) -> Self {
         self.onMoveToSuperview = onMoveToSuperview
         return self
     }
     
-    @discardableResult func withConstraints(_ onMoveToSuperview: @escaping ViewAndSuperviewAction) -> Self {
+    @discardableResult func onMoveToSuperview(_ onMoveToSuperview: @escaping ViewAndSuperviewAction) -> Self {
         self.onMoveToSuperview = { view in
             guard let superview = self.superview else { return }
             onMoveToSuperview(self, superview)

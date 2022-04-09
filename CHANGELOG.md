@@ -1,8 +1,13 @@
 # CHANGELOG
 
-* 0.0.10 - 0.0.11
 
+
+
+* 0.0.10 - 0.0.12
+
+    + Updated `ScrollToResponderViewController`
     + Extracted `UITextField` styles to `UI`
+    + Added `UIButton` styles
     + Added color styles
 
 * 0.0.8 - 0.0.9
