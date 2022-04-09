@@ -24,6 +24,7 @@
 		558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664127FE6551000A5736 /* UIButton+Styles.swift */; };
 		55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */; };
 		55F090822801BB7800210D36 /* Withable in Frameworks */ = {isa = PBXBuildFile; productRef = 55F090812801BB7800210D36 /* Withable */; };
+		55F090842802029D00210D36 /* UIView+Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F090832802029C00210D36 /* UIView+Speed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToResponderViewController.swift; sourceTree = "<group>"; };
 		558C664127FE6551000A5736 /* UIButton+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeViewController.swift; sourceTree = "<group>"; };
+		55F090832802029C00210D36 /* UIView+Speed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Speed.swift"; sourceTree = "<group>"; };
 		55FD29DA27FD966B00AC7BCB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,7 @@
 				5522D71D2800CCD6008150D2 /* UI.swift */,
 				550437492801013B0006E775 /* UITextField+Styles.swift */,
 				558C664127FE6551000A5736 /* UIButton+Styles.swift */,
+				55F090832802029C00210D36 /* UIView+Speed.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,
 				5522D7192800CAEF008150D2 /* TextFieldDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,
+				55F090842802029D00210D36 /* UIView+Speed.swift in Sources */,
 				552B6B9B27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift in Sources */,
 				5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */,
 			);

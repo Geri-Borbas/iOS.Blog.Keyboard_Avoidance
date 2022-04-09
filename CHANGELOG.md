@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+* 0.0.21
+
+    + Added `UIView+Speed`
+
 * 0.0.20
 
     + Added `Withable` Swift package (removed local sources)

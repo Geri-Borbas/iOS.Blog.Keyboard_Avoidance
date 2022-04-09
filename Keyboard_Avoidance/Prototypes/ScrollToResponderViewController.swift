@@ -15,23 +15,23 @@ class ScrollToResponderViewController: UIViewController {
         .withFormStyle(
             placeholder: "email",
             imageName: "envelope",
-            next: firstNameTextField
+            next: givenNameTextField
         )
         .with {
             $0.keyboardType = .emailAddress
             $0.autocapitalizationType = .none
         }
     
-    lazy var firstNameTextField = UITextField()
+    lazy var givenNameTextField = UITextField()
         .withFormStyle(
-            placeholder: "first name",
+            placeholder: "given name",
             imageName: "person.crop.circle",
-            next: lastNameTextField
+            next: familyNameTextField
         )
     
-    lazy var lastNameTextField = UITextField()
+    lazy var familyNameTextField = UITextField()
         .withFormStyle(
-            placeholder: "last name",
+            placeholder: "family name",
             imageName: "equal.square",
             next: passwordTextField
         )
@@ -49,8 +49,8 @@ class ScrollToResponderViewController: UIViewController {
         .vertical(spacing: 5)
         .views(
             emailTextField,
-            firstNameTextField,
-            lastNameTextField,
+            givenNameTextField,
+            familyNameTextField,
             passwordTextField
         )
     
