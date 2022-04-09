@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Withable",
+        "repositoryURL": "https://github.com/Geri-Borbas/iOS.Package.Withable",
+        "state": {
+          "branch": "main",
+          "revision": "b381d6575d1890a07449d41bf1897d2acef74124",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

@@ -1,7 +1,9 @@
 # CHANGELOG
 
 
+* 0.0.20
 
+    + Added `Withable` Swift package (removed local sources)
 
 * 0.0.10 - 0.0.12
 

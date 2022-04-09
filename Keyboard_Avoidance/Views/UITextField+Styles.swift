@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Withable
 
 
 extension UITextField {
@@ -30,7 +31,6 @@ extension UITextField {
                 .onMoveToSuperview {
                     $0.set(width: 20)
                     $0.set(height: 20)
-                    
                 }
             $0.leftViewMode = .always
             let textField = $0
@@ -52,7 +52,7 @@ extension UITextField {
                     $0.set(width: 10 + 56)
                     $0.set(height: 56)
                 }
-                .onTouchUpInside {
+                .onTap {
                     textField.toggleFirstResponder()
                 }
             $0.rightViewMode = .always

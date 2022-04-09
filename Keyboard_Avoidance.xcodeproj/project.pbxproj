@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5504374A2801013B0006E775 /* UITextField+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550437492801013B0006E775 /* UITextField+Styles.swift */; };
-		5504374B280110EF0006E775 /* NSObject+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 554A97B227FFB221004C8FC7 /* NSObject+Extensions.swift */; };
 		5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5512A85327F8D3D700B0829D /* WireframeView.swift */; };
 		55134BB127FA1E5F003CD09C /* OrientationListenerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */; };
 		5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522D7162800C07A008150D2 /* UIFont+Extensions.swift */; };
@@ -23,11 +22,8 @@
 		555F90DD27F855A20075798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555F90DB27F855A20075798F /* LaunchScreen.storyboard */; };
 		558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */; };
 		558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664127FE6551000A5736 /* UIButton+Styles.swift */; };
-		558C664727FE6554000A5736 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664227FE6552000A5736 /* UIKit+Extensions.swift */; };
-		558C664827FE6554000A5736 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664327FE6553000A5736 /* UIButton+Extensions.swift */; };
-		558C664927FE6554000A5736 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664427FE6554000A5736 /* UIView+Constraints.swift */; };
-		558C664A27FE6554000A5736 /* Withable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664527FE6554000A5736 /* Withable.swift */; };
 		55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */; };
+		55F090822801BB7800210D36 /* Withable in Frameworks */ = {isa = PBXBuildFile; productRef = 55F090812801BB7800210D36 /* Withable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +36,6 @@
 		5522D71A2800CB26008150D2 /* UIResponder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extensions.swift"; sourceTree = "<group>"; };
 		5522D71D2800CCD6008150D2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationsViewController.swift; sourceTree = "<group>"; };
-		554A97B227FFB221004C8FC7 /* NSObject+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extensions.swift"; sourceTree = "<group>"; };
 		555F90CD27F855990075798F /* Keyboard_Avoidance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_Avoidance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555F90D027F855990075798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555F90D227F855990075798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,10 +46,6 @@
 		555F90E427F868060075798F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToResponderViewController.swift; sourceTree = "<group>"; };
 		558C664127FE6551000A5736 /* UIButton+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
-		558C664227FE6552000A5736 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
-		558C664327FE6553000A5736 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		558C664427FE6554000A5736 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		558C664527FE6554000A5736 /* Withable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Withable.swift; sourceTree = "<group>"; };
 		55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeViewController.swift; sourceTree = "<group>"; };
 		55FD29DA27FD966B00AC7BCB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55F090822801BB7800210D36 /* Withable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,24 +122,11 @@
 				5522D71C2800CC9E008150D2 /* Views */,
 				552B6B9D27FE0EF200DC0229 /* KeyboardLayoutGuide */,
 				552B6B9C27FDF0BF00DC0229 /* Prototypes */,
-				558C664027FE6541000A5736 /* Extensions */,
 				555F90D927F855A20075798F /* Assets.xcassets */,
 				555F90DB27F855A20075798F /* LaunchScreen.storyboard */,
 				555F90DE27F855A20075798F /* Info.plist */,
 			);
 			path = Keyboard_Avoidance;
-			sourceTree = "<group>";
-		};
-		558C664027FE6541000A5736 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				554A97B227FFB221004C8FC7 /* NSObject+Extensions.swift */,
-				558C664327FE6553000A5736 /* UIButton+Extensions.swift */,
-				558C664227FE6552000A5736 /* UIKit+Extensions.swift */,
-				558C664427FE6554000A5736 /* UIView+Constraints.swift */,
-				558C664527FE6554000A5736 /* Withable.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +145,9 @@
 			dependencies = (
 			);
 			name = Keyboard_Avoidance;
+			packageProductDependencies = (
+				55F090812801BB7800210D36 /* Withable */,
+			);
 			productName = Keyboard_Avoidance;
 			productReference = 555F90CD27F855990075798F /* Keyboard_Avoidance.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 555F90C427F855990075798F;
+			packageReferences = (
+				55F090802801BB7800210D36 /* XCRemoteSwiftPackageReference "iOS.Package" */,
+			);
 			productRefGroup = 555F90CE27F855990075798F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -224,7 +209,6 @@
 				555F90D527F855990075798F /* ViewController.swift in Sources */,
 				5522D71B2800CB26008150D2 /* UIResponder+Extensions.swift in Sources */,
 				55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */,
-				558C664927FE6554000A5736 /* UIView+Constraints.swift in Sources */,
 				5504374A2801013B0006E775 /* UITextField+Styles.swift in Sources */,
 				558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */,
 				5522D71E2800CCD6008150D2 /* UI.swift in Sources */,
@@ -234,10 +218,6 @@
 				5522D7192800CAEF008150D2 /* TextFieldDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,
 				552B6B9B27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift in Sources */,
-				558C664727FE6554000A5736 /* UIKit+Extensions.swift in Sources */,
-				558C664827FE6554000A5736 /* UIButton+Extensions.swift in Sources */,
-				558C664A27FE6554000A5736 /* Withable.swift in Sources */,
-				5504374B280110EF0006E775 /* NSObject+Extensions.swift in Sources */,
 				5512A85427F8D3D800B0829D /* WireframeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55F090802801BB7800210D36 /* XCRemoteSwiftPackageReference "iOS.Package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Geri-Borbas/iOS.Package.Withable";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55F090812801BB7800210D36 /* Withable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55F090802801BB7800210D36 /* XCRemoteSwiftPackageReference "iOS.Package" */;
+			productName = Withable;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 555F90C527F855990075798F /* Project object */;
 }
