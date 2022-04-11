@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+* 0.0.25
+
+    + Added `WrapperScrollViewController` (added to `ViewController` as well)
+
 * 0.0.23
     
     + Added `UIButton.withSignUpButtonStyle`

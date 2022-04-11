@@ -73,6 +73,8 @@ class UIKeyboardLayoutGuide: UILayoutGuide {
         NotificationCenter.default
             .publisher(for: UIWindow.didBecomeKeyNotification)
             .sink { [unowned self] notification in
+                // TODO: This should be replaced with swizzling `safeAreaInsetsDidChange()`.
+                // More at https://developer.apple.com/documentation/uikit/uiview/2891104-safeareainsetsdidchange
                 if let window = notification.object as? UIWindow {
                     self.layout(for: window.bounds.bottomEdgeRect, in: window)
                 }

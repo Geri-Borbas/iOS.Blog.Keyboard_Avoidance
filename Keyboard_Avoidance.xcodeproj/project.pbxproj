@@ -22,6 +22,7 @@
 		555F90D527F855990075798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D427F855990075798F /* ViewController.swift */; };
 		555F90DA27F855A20075798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555F90D927F855A20075798F /* Assets.xcassets */; };
 		555F90DD27F855A20075798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555F90DB27F855A20075798F /* LaunchScreen.storyboard */; };
+		5580571A2804B96700DBFA69 /* WrapperScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558057192804B96700DBFA69 /* WrapperScrollViewController.swift */; };
 		558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */; };
 		558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664127FE6551000A5736 /* UIButton+Styles.swift */; };
 		55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */; };
@@ -49,6 +50,7 @@
 		555F90DC27F855A20075798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555F90DE27F855A20075798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555F90E427F868060075798F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		558057192804B96700DBFA69 /* WrapperScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperScrollViewController.swift; sourceTree = "<group>"; };
 		558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToResponderViewController.swift; sourceTree = "<group>"; };
 		558C664127FE6551000A5736 /* UIButton+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
 		55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */,
 				553B9CC32803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift */,
 				558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */,
+				558057192804B96700DBFA69 /* WrapperScrollViewController.swift */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85327F8D3D700B0829D /* WireframeView.swift */,
 				5522D7162800C07A008150D2 /* UIFont+Extensions.swift */,
@@ -225,6 +228,7 @@
 				553B9CC42803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift in Sources */,
 				558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */,
 				5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */,
+				5580571A2804B96700DBFA69 /* WrapperScrollViewController.swift in Sources */,
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,
 				5522D7192800CAEF008150D2 /* TextFieldDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,

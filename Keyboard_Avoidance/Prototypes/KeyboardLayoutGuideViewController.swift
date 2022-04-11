@@ -58,4 +58,3 @@ class KeyboardLayoutGuideViewController: UIViewController {
         body.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -UI.spacing).isActive = true
     }
 }
-
