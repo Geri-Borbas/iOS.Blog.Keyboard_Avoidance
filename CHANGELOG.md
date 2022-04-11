@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+* 0.0.23
+    
+    + Added `UIButton.withSignUpButtonStyle`
+    + Added `KeyboardLayoutGuideViewController`
+    + Updated `KeyboardNotificationsViewController`
+    + Updated `ScrollToResponderViewController`
+
 * 0.0.21
 
     + Added `UIView+Speed`

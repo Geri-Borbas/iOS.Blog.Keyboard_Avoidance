@@ -12,7 +12,48 @@ import Withable
 
 extension UITextField {
     
-    func withFormStyle(placeholder: String, imageName: String, next nextTextField: UITextField? = nil) -> Self {
+    var withEmailStyle: Self {
+        withFormStyle(
+            placeholder: "email",
+            imageName: "envelope"
+        )
+        .with {
+            $0.keyboardType = .emailAddress
+            $0.autocapitalizationType = .none
+        }
+    }
+    
+    var withGivenNameStyle: Self {
+        withFormStyle(
+            placeholder: "given name",
+            imageName: "person.crop.circle"
+        )
+    }
+    
+    var withFamilyNameStyle: Self {
+        withFormStyle(
+            placeholder: "family name",
+            imageName: "equal.square"
+        )
+    }
+    
+    var withPasswordStyle: Self {
+        withFormStyle(
+            placeholder: "password",
+            imageName: "lock"
+        )
+        .with {
+            $0.isSecureTextEntry = true
+        }
+    }
+    
+    func with(next nextTextField: UITextField) -> Self {
+        with {
+            $0.nextTextField = nextTextField
+        }
+    }
+    
+    func withFormStyle(placeholder: String, imageName: String) -> Self {
         with {
             $0.attributedPlaceholder = NSAttributedString(
                 string: placeholder,
@@ -106,8 +147,8 @@ extension TextFieldDelegate {
             )
         },
         onReturn: {
-            $0.resignFirstResponder()
             $0.nextTextField?.becomeFirstResponder()
+            $0.resignFirstResponder()
         }
     )
 }

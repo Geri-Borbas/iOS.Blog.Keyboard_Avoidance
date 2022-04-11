@@ -15,6 +15,8 @@
 		5522D71B2800CB26008150D2 /* UIResponder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522D71A2800CB26008150D2 /* UIResponder+Extensions.swift */; };
 		5522D71E2800CCD6008150D2 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522D71D2800CCD6008150D2 /* UI.swift */; };
 		552B6B9B27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */; };
+		553B9CC42803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B9CC32803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift */; };
+		553B9CC62803B304006D5A39 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553B9CC52803B304006D5A39 /* HeaderView.swift */; };
 		555F90D127F855990075798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D027F855990075798F /* AppDelegate.swift */; };
 		555F90D327F855990075798F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D227F855990075798F /* SceneDelegate.swift */; };
 		555F90D527F855990075798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D427F855990075798F /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 		5522D71A2800CB26008150D2 /* UIResponder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Extensions.swift"; sourceTree = "<group>"; };
 		5522D71D2800CCD6008150D2 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationsViewController.swift; sourceTree = "<group>"; };
+		553B9CC32803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutGuideViewController.swift; sourceTree = "<group>"; };
+		553B9CC52803B304006D5A39 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		555F90CD27F855990075798F /* Keyboard_Avoidance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keyboard_Avoidance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		555F90D027F855990075798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		555F90D227F855990075798F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +82,9 @@
 		552B6B9C27FDF0BF00DC0229 /* Prototypes */ = {
 			isa = PBXGroup;
 			children = (
+				553B9CC52803B304006D5A39 /* HeaderView.swift */,
 				552B6B9A27FDF0B700DC0229 /* KeyboardNotificationsViewController.swift */,
+				553B9CC32803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift */,
 				558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85327F8D3D700B0829D /* WireframeView.swift */,
@@ -214,7 +220,9 @@
 				55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */,
 				5504374A2801013B0006E775 /* UITextField+Styles.swift in Sources */,
 				558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */,
+				553B9CC62803B304006D5A39 /* HeaderView.swift in Sources */,
 				5522D71E2800CCD6008150D2 /* UI.swift in Sources */,
+				553B9CC42803AE96006D5A39 /* KeyboardLayoutGuideViewController.swift in Sources */,
 				558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */,
 				5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */,
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,

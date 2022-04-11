@@ -16,9 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		if let windowScene = scene as? UIWindowScene {
 			let window = UIWindow(windowScene: windowScene)
 			window.rootViewController =
-                ScrollToResponderViewController()
+                // ScrollToResponderViewController()
                 // ViewController()
                 // KeyboardNotificationsViewController()
+                KeyboardLayoutGuideViewController()
 			self.window = window
 			window.makeKeyAndVisible()
 		}

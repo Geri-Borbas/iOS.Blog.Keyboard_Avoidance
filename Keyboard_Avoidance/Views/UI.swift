@@ -11,6 +11,8 @@ import UIKit
 
 struct UI {
     
+    static let spacing = CGFloat(15)
+    
     struct Color {
         
         static let label = UIColor.init(named: "Label") ?? .notFound

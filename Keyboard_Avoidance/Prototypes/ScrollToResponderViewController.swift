@@ -12,38 +12,19 @@ import UIKit
 class ScrollToResponderViewController: UIViewController {
     
     lazy var emailTextField = UITextField()
-        .withFormStyle(
-            placeholder: "email",
-            imageName: "envelope",
-            next: givenNameTextField
-        )
-        .with {
-            $0.keyboardType = .emailAddress
-            $0.autocapitalizationType = .none
-        }
+        .withEmailStyle
+        .with(next: givenNameTextField)
     
     lazy var givenNameTextField = UITextField()
-        .withFormStyle(
-            placeholder: "given name",
-            imageName: "person.crop.circle",
-            next: familyNameTextField
-        )
-    
+        .withGivenNameStyle
+        .with(next: familyNameTextField)
+        
     lazy var familyNameTextField = UITextField()
-        .withFormStyle(
-            placeholder: "family name",
-            imageName: "equal.square",
-            next: passwordTextField
-        )
+        .withFamilyNameStyle
+        .with(next: passwordTextField)
     
     lazy var passwordTextField = UITextField()
-        .withFormStyle(
-            placeholder: "password",
-            imageName: "lock"
-        )
-        .with {
-            $0.isSecureTextEntry = true
-        }
+        .withPasswordStyle
     
     lazy var textFields = UIStackView()
         .vertical(spacing: 5)
@@ -62,36 +43,14 @@ class ScrollToResponderViewController: UIViewController {
                     .with {
                         $0.addSubview(textFields)
                     }
-                    .onMoveToSuperview {
-                        $0.pin(to: $1)
-                        self.textFields.pin(to: $0, insets: .init(top: 0, left: 10, bottom: 0, right: 10))
-                        self.textFields.widthAnchor.constraint(equalTo: $0.widthAnchor, constant: -20).isActive = true
+                    .onMoveToSuperview { scrollView, superview in
+                        scrollView.pin(to: superview)
+                        self.textFields.pin(to: scrollView, insets: .init(top: 0, left: 10, bottom: 0, right: 10))
+                        self.textFields.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -20).isActive = true
                     }
             )
-            $0.addSubview(
-                UIView()
-                    .with {
-                        $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
-                    }
-                    .onMoveToSuperview {
-                        $0.set(height: 500)
-                        $0.topAnchor.constraint(equalTo: $1.bottomAnchor).isActive = true
-                        $0.leftAnchor.constraint(equalTo: $1.leftAnchor).isActive = true
-                        $0.rightAnchor.constraint(equalTo: $1.rightAnchor).isActive = true
-                    }
-            )
-            $0.addSubview(
-                UIView()
-                    .with {
-                        $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
-                    }
-                    .onMoveToSuperview {
-                        $0.set(height: 500)
-                        $0.bottomAnchor.constraint(equalTo: $1.topAnchor).isActive = true
-                        $0.leftAnchor.constraint(equalTo: $1.leftAnchor).isActive = true
-                        $0.rightAnchor.constraint(equalTo: $1.rightAnchor).isActive = true
-                    }
-            )
+            $0.addSubview(UIView().withTopCoverStyle)
+            $0.addSubview(UIView().withBottomCoverStyle)
         }
         .onMoveToSuperview {
             $0.set(height: 160) // 10 + 56 + 5 + 56 + 5 + 56 / 2
@@ -135,6 +94,34 @@ extension UIScrollView {
             $0.layer.cornerRadius = 4
             $0.layer.borderWidth = 1
             $0.clipsToBounds = false
+        }
+    }
+}
+
+
+extension UIView {
+    
+    var withTopCoverStyle: Self {
+        with {
+            $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
+        }
+        .onMoveToSuperview { view, superview in
+            view.set(height: 500)
+            view.topAnchor.constraint(equalTo: superview.bottomAnchor).isActive = true
+            view.leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+            view.rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
+        }
+    }
+    
+    var withBottomCoverStyle: Self {
+        with {
+            $0.backgroundColor = UI.Color.background.withAlphaComponent(0.6)
+        }
+        .onMoveToSuperview { view, superview in
+            view.set(height: 500)
+            view.bottomAnchor.constraint(equalTo: superview.topAnchor).isActive = true
+            view.leftAnchor.constraint(equalTo: superview.leftAnchor).isActive = true
+            view.rightAnchor.constraint(equalTo: superview.rightAnchor).isActive = true
         }
     }
 }

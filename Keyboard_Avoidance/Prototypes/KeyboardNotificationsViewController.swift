@@ -9,52 +9,53 @@
 import UIKit
 
 
-class KeyboardNotificationsViewController: UIViewController, UITextFieldDelegate {
-
+class KeyboardNotificationsViewController: UIViewController {
+    
+    lazy var emailTextField = UITextField()
+        .withEmailStyle
+        .with(next: givenNameTextField)
+    
+    lazy var givenNameTextField = UITextField()
+        .withGivenNameStyle
+        .with(next: familyNameTextField)
+    
+    lazy var familyNameTextField = UITextField()
+        .withFamilyNameStyle
+        .with(next: passwordTextField)
+    
+    lazy var passwordTextField = UITextField()
+        .withPasswordStyle
+    
+    lazy var signUpButton = UIButton()
+        .withSignUpButtonStyle
+    
+    lazy var body = UIStackView()
+        .vertical(spacing: 5)
+        .views(
+            HeaderView(),
+            emailTextField,
+            givenNameTextField,
+            familyNameTextField,
+            passwordTextField,
+            signUpButton
+        )
+    
     var bottomConstraint: NSLayoutConstraint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         
-        // Views.
-        let headerLabel = UITextField()
-        headerLabel.text = "Sign In"
-        
-        let usernameTextField = UITextField()
-        usernameTextField.placeholder = "username"
-        usernameTextField.returnKeyType = .done
-        usernameTextField.delegate = self
-        
-        let passwordTextField = UITextField()
-        passwordTextField.placeholder = "password"
-        passwordTextField.returnKeyType = .done
-        passwordTextField.isSecureTextEntry = true
-        passwordTextField.delegate = self
-        
         // Hierarchy.
-        view.addSubview(headerLabel)
-        view.addSubview(usernameTextField)
-        view.addSubview(passwordTextField)
-        
-        // Constraints.
-        let padding = CGFloat(15)
-        let spacing = CGFloat(5)
-        headerLabel.translatesAutoresizingMaskIntoConstraints = false
-        headerLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        headerLabel.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: padding).isActive = true
-        headerLabel.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: padding).isActive = true
-        
-        passwordTextField.translatesAutoresizingMaskIntoConstraints = false
-        self.bottomConstraint = passwordTextField.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 0)
-        self.bottomConstraint?.isActive = true
-        passwordTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: padding).isActive = true
-        passwordTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: padding).isActive = true
-        
-        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
-        usernameTextField.bottomAnchor.constraint(equalTo: passwordTextField.topAnchor, constant: spacing).isActive = true
-        usernameTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: padding).isActive = true
-        usernameTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: padding).isActive = true
+        view.addSubview(body)
+        body.translatesAutoresizingMaskIntoConstraints = false
+        body.topAnchor.constraint(equalTo: view.topAnchor, constant: UI.spacing).isActive = true
+        self.bottomConstraint = body.bottomAnchor.constraint(
+            equalTo: view.bottomAnchor,
+            constant: -UI.spacing
+        ).with { $0.isActive = true }
+        body.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: UI.spacing).isActive = true
+        body.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -UI.spacing).isActive = true
         
         // Observe keyboard frame changes.
         NotificationCenter.default.addObserver(
@@ -65,9 +66,9 @@ class KeyboardNotificationsViewController: UIViewController, UITextFieldDelegate
         )
     }
     
-    @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        self.bottomConstraint?.constant = -view.safeAreaInsets.bottom - UI.spacing
     }
     
     @objc private func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -76,7 +77,7 @@ class KeyboardNotificationsViewController: UIViewController, UITextFieldDelegate
         guard let userInfo = notification.userInfo,
               let animationDurationNumber = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber,
               let animationCurveNumber = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
-              let keyboardFrameBeginValue = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue,
+              let _ = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue,
               let keyboardFrameEndValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
               let window = UIApplication.shared.windows.first
         else {
@@ -99,7 +100,8 @@ class KeyboardNotificationsViewController: UIViewController, UITextFieldDelegate
             delay: 0,
             options: animationCurveOptions,
             animations: { [unowned self] in
-                self.bottomConstraint?.constant = -keyboardHeight
+                let bottomInset = keyboardHeight > 0 ? keyboardHeight : view.safeAreaInsets.bottom
+                self.bottomConstraint?.constant = -bottomInset - UI.spacing
                 view.layoutIfNeeded()
             }
         )

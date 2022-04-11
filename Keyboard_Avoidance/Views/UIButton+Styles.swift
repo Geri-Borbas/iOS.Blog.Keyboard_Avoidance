@@ -11,6 +11,42 @@ import UIKit
 
 extension UIButton {
     
+    var withSignUpButtonStyle: Self {
+        withButtonStyle
+            .with {
+                $0.setAttributedTitle(
+                    NSMutableAttributedString(
+                        string: "SIGN UP ",
+                        attributes: [
+                            .font : UIFont.rounded(size: 20, weight: .bold),
+                            .foregroundColor : UI.Color.label
+                        ]
+                    )
+                        .with {
+                            $0.append(
+                                NSAttributedString(
+                                    attachment: NSTextAttachment()
+                                        .with {
+                                            $0.image = UIImage(
+                                                systemName: "arrow.forward",
+                                                withConfiguration: UIImage.SymbolConfiguration(
+                                                    pointSize: 20,
+                                                    weight: .bold
+                                                )
+                                            )?
+                                                .withTintColor(
+                                                    UI.Color.label,
+                                                    renderingMode: .alwaysTemplate
+                                                )
+                                        }
+                                )
+                            )
+                        },
+                    for: .normal
+                )
+            }
+    }
+    
     var withBaseButtonStyle: Self {
         with { button in
             button.titleLabel?
