@@ -5,6 +5,12 @@
     + SwiftUI testbed
     + `UIView.safeAreaInsetsDidChange()` swizzling
 
+* 0.0.30
+
+    + Added `UIApplication.firstWindow`
+    + Added `HeaderView.fixedHeight`
+    + Extracted extensions
+
 * 0.0.25
 
     + Added `WrapperScrollViewController` (added to `ViewController` as well)

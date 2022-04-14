@@ -102,9 +102,7 @@
 				558057192804B96700DBFA69 /* WrapperScrollViewController.swift */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85327F8D3D700B0829D /* WireframeView.swift */,
-				5522D7162800C07A008150D2 /* UIFont+Extensions.swift */,
-				5522D7182800CAEF008150D2 /* TextFieldDelegate.swift */,
-				5522D71A2800CB26008150D2 /* UIResponder+Extensions.swift */,
+				55A00E8C2808493E00718A56 /* Extensions */,
 			);
 			path = Prototypes;
 			sourceTree = "<group>";
@@ -114,11 +112,8 @@
 			children = (
 				55A00E8128082F9200718A56 /* UIView+KeyboardLayoutGuide.swift */,
 				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
-				55A00E8928083A9100718A56 /* UIApplication+Extensions.swift */,
-				55A00E87280839F100718A56 /* CGRect+Extensions.swift */,
-				55A00E85280839B400718A56 /* AnimationCurve+Extensions.swift */,
-				55A00E832808395600718A56 /* Notification+Extensions.swift */,
 				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
+				55A00E8B2808491900718A56 /* Extensions */,
 			);
 			path = KeyboardLayoutGuide;
 			sourceTree = "<group>";
@@ -147,14 +142,35 @@
 				555F90D027F855990075798F /* AppDelegate.swift */,
 				555F90D227F855990075798F /* SceneDelegate.swift */,
 				555F90D427F855990075798F /* ViewController.swift */,
-				5522D71C2800CC9E008150D2 /* Views */,
 				552B6B9D27FE0EF200DC0229 /* KeyboardLayoutGuide */,
+				5522D71C2800CC9E008150D2 /* Views */,
 				552B6B9C27FDF0BF00DC0229 /* Prototypes */,
 				555F90D927F855A20075798F /* Assets.xcassets */,
 				555F90DB27F855A20075798F /* LaunchScreen.storyboard */,
 				555F90DE27F855A20075798F /* Info.plist */,
 			);
 			path = Keyboard_Avoidance;
+			sourceTree = "<group>";
+		};
+		55A00E8B2808491900718A56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				55A00E8928083A9100718A56 /* UIApplication+Extensions.swift */,
+				55A00E87280839F100718A56 /* CGRect+Extensions.swift */,
+				55A00E85280839B400718A56 /* AnimationCurve+Extensions.swift */,
+				55A00E832808395600718A56 /* Notification+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		55A00E8C2808493E00718A56 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5522D7182800CAEF008150D2 /* TextFieldDelegate.swift */,
+				5522D7162800C07A008150D2 /* UIFont+Extensions.swift */,
+				5522D71A2800CB26008150D2 /* UIResponder+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -380,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
