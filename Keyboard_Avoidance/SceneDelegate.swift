@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,11 +18,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 			let window = UIWindow(windowScene: windowScene)
 			window.rootViewController =
                 // ScrollToResponderViewController()
-                // ViewController()
+                ViewController()
                 // KeyboardNotificationsViewController()
                 // KeyboardLayoutGuideViewController()
-                WrapperScrollViewController()
+                // WrapperScrollViewController()
                 // WireframeViewController()
+                // UIHostingController(rootView: SwiftUIView())
 			self.window = window
 			window.makeKeyAndVisible()
 		}

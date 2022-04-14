@@ -90,8 +90,8 @@ extension UITextField {
                     $0.imageView?.tintColor = UI.Color.label.withAlphaComponent(0.25)
                 }
                 .onMoveToSuperview {
-                    $0.set(width: 10 + 56)
-                    $0.set(height: 56)
+                    $0.set(width: 10 + UI.itemHeight)
+                    $0.set(height: UI.itemHeight)
                 }
                 .onTap {
                     textField.toggleFirstResponder()
@@ -104,7 +104,7 @@ extension UITextField {
             }
         }
         .onMoveToSuperview {
-            $0.set(height: 56)
+            $0.set(height: UI.itemHeight)
         }
     }
 }

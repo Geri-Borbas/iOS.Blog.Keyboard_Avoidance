@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         .withSignUpButtonStyle
     
     lazy var content = UIStackView()
-        .vertical(spacing: 5)
+        .vertical(spacing: UI.spacing)
         .views(
             HeaderView()
                 .withFixedHeight,
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         // Hierarchy.
         view.addSubview(body)
         body.translatesAutoresizingMaskIntoConstraints = false
-        body.topAnchor.constraint(equalTo: view.topAnchor, constant: UI.spacing).isActive = true
+        body.topAnchor.constraint(equalTo: view.topAnchor, constant: UI.padding).isActive = true
 
         // 💎
         body.bottomAnchor.constraint(

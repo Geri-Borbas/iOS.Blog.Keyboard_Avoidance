@@ -11,7 +11,9 @@ import UIKit
 
 struct UI {
     
-    static let spacing = CGFloat(15)
+    static let spacing = CGFloat(5)
+    static let padding = CGFloat(15)
+    static let itemHeight = CGFloat(56)
     
     struct Color {
         

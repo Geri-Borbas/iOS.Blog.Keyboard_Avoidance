@@ -11,6 +11,14 @@ import UIKit
 
 extension UIButton {
     
+    var iconName: String {
+        if #available(iOS 14.0, *) {
+            return "arrow.forward"
+        } else {
+            return "chevron.right"
+        }
+    }
+    
     var withSignUpButtonStyle: Self {
         withButtonStyle
             .with {
@@ -28,7 +36,7 @@ extension UIButton {
                                     attachment: NSTextAttachment()
                                         .with {
                                             $0.image = UIImage(
-                                                systemName: "arrow.forward",
+                                                systemName: iconName,
                                                 withConfiguration: UIImage.SymbolConfiguration(
                                                     pointSize: 20,
                                                     weight: .bold

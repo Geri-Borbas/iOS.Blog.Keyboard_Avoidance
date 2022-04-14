@@ -4,10 +4,14 @@
 
     + `UIView.safeAreaInsetsDidChange()` swizzling
 
+* 0.0.38
+
+    + Added `UI.spacing`, `UI.padding`, and `UI.itemHeight`
+    + Updated `HeaderView.withFixedHeight`
+
 * 0.0.35
 
     + Added `SwiftUIView`
-    + 
 
 * 0.0.30 - 0.0.31
 

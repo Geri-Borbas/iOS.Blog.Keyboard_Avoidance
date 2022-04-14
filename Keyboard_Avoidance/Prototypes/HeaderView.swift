@@ -52,8 +52,20 @@ extension HeaderView {
     
     var withFixedHeight: Self {
         onMoveToSuperview {
-            $0.set(height: 480)
+            let screenHeight = UIScreen.main.bounds.height
+            let itemsHeight = UI.itemHeight * 5 + UI.spacing * 4
+            let safeAreaHeight = UIApplication.firstWindow?.safeAreaInsets.verticalInsets ?? CGFloat(0)
+            let headerHeight = screenHeight - itemsHeight - safeAreaHeight
+            $0.set(height: headerHeight)
         }
+    }
+}
+
+
+extension UIEdgeInsets {
+    
+    var verticalInsets: CGFloat {
+        top + bottom
     }
 }
 

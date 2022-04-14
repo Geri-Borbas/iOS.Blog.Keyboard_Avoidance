@@ -30,7 +30,7 @@ class KeyboardNotificationsViewController: UIViewController {
         .withSignUpButtonStyle
     
     lazy var body = UIStackView()
-        .vertical(spacing: 5)
+        .vertical(spacing: UI.spacing)
         .views(
             HeaderView(),
             emailTextField,
@@ -49,13 +49,13 @@ class KeyboardNotificationsViewController: UIViewController {
         // Hierarchy.
         view.addSubview(body)
         body.translatesAutoresizingMaskIntoConstraints = false
-        body.topAnchor.constraint(equalTo: view.topAnchor, constant: UI.spacing).isActive = true
+        body.topAnchor.constraint(equalTo: view.topAnchor, constant: UI.padding).isActive = true
         self.bottomConstraint = body.bottomAnchor.constraint(
             equalTo: view.bottomAnchor,
-            constant: -UI.spacing
+            constant: -UI.padding
         ).with { $0.isActive = true }
-        body.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: UI.spacing).isActive = true
-        body.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -UI.spacing).isActive = true
+        body.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: UI.padding).isActive = true
+        body.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -UI.padding).isActive = true
         
         // Observe keyboard frame changes.
         NotificationCenter.default.addObserver(
@@ -68,7 +68,7 @@ class KeyboardNotificationsViewController: UIViewController {
     
     override func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
-        self.bottomConstraint?.constant = -view.safeAreaInsets.bottom - UI.spacing
+        self.bottomConstraint?.constant = -view.safeAreaInsets.bottom - UI.padding
     }
     
     @objc private func keyboardWillChangeFrame(_ notification: NSNotification) {
@@ -101,7 +101,7 @@ class KeyboardNotificationsViewController: UIViewController {
             options: animationCurveOptions,
             animations: { [unowned self] in
                 let bottomInset = keyboardHeight > 0 ? keyboardHeight : view.safeAreaInsets.bottom
-                self.bottomConstraint?.constant = -bottomInset - UI.spacing
+                self.bottomConstraint?.constant = -bottomInset - UI.padding
                 view.layoutIfNeeded()
             }
         )

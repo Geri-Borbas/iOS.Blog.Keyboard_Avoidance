@@ -27,7 +27,7 @@ class ScrollToResponderViewController: UIViewController {
         .withPasswordStyle
     
     lazy var textFields = UIStackView()
-        .vertical(spacing: 5)
+        .vertical(spacing: UI.spacing)
         .views(
             emailTextField,
             givenNameTextField,
