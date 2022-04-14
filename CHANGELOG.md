@@ -1,5 +1,9 @@
 # CHANGELOG
 
+* Doing
+
+    + SwiftUI testbed
+    + `UIView.safeAreaInsetsDidChange()` swizzling
 
 * 0.0.25
 

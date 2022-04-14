@@ -48,6 +48,16 @@ class HeaderView: UIView {
 }
 
 
+extension HeaderView {
+    
+    var withFixedHeight: Self {
+        onMoveToSuperview {
+            $0.set(height: 480)
+        }
+    }
+}
+
+
 extension UIImageView {
     
     var iconName: String {

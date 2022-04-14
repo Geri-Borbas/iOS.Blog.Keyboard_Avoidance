@@ -79,7 +79,7 @@ class KeyboardNotificationsViewController: UIViewController {
               let animationCurveNumber = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber,
               let _ = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue,
               let keyboardFrameEndValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
-              let window = UIApplication.shared.windows.first
+              let window = UIApplication.firstWindow
         else {
             return
         }

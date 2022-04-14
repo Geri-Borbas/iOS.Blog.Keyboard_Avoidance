@@ -31,25 +31,19 @@ class WireframeViewController: UIViewController, UITextFieldDelegate {
         view.addSubview(wireframe)
         
         // Use this to ignore bottom safe area (in `keyboardLayoutGuide` as well).
-        // view.insetsLayoutMarginsFromSafeArea = false
-        
-//        wireframe.bottomAnchor.constraint(greaterThanOrEqualTo: view.bottomAnchor).isActive = true
-        let wireframeBottomConstraint =  wireframe.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor, constant: 0)
-        view.keyboardLayoutGuide.followsUndockedKeyboard = true
-        view.keyboardLayoutGuide.setConstraints([wireframeBottomConstraint], activeWhenAwayFrom: .bottom)
-//        view.keyboardLayoutGuide.setConstraints([wireframeBottomConstraint], activeWhenNearEdge: .bottom)
+        view.insetsLayoutMarginsFromSafeArea = false
         
         // Constraints.
         wireframe.translatesAutoresizingMaskIntoConstraints = false
-        wireframe.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-       
-        wireframe.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
-        wireframe.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
+        wireframe.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        wireframe.bottomAnchor.constraint(equalTo: view.keyboardLayoutGuide.topAnchor).isActive = true
+        wireframe.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        wireframe.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
         
         firstNameTextField.translatesAutoresizingMaskIntoConstraints = false
-        firstNameTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
-        firstNameTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: 0).isActive = true
-        firstNameTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: 0).isActive = true
+        firstNameTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        firstNameTextField.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+        firstNameTextField.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
     }
     
     @objc func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -19,7 +19,7 @@ class OrientationListenerViewController: UIViewController {
     
     init() {
         super.init(nibName: nil, bundle: nil)
-        UIApplication.shared.windows.first?.rootViewController?.addChild(self)
+        UIApplication.firstWindow?.rootViewController?.addChild(self)
     }
     
     required init?(coder: NSCoder) {

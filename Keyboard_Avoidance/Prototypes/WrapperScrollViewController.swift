@@ -33,9 +33,7 @@ class WrapperScrollViewController: UIViewController {
         .vertical(spacing: 5)
         .views(
             HeaderView()
-                .onMoveToSuperview {
-                    $0.set(height: 480)
-                },
+                .withFixedHeight,
             emailTextField,
             givenNameTextField,
             familyNameTextField,
@@ -49,9 +47,9 @@ class WrapperScrollViewController: UIViewController {
             $0.keyboardDismissMode = .onDrag
             $0.bounces = false
         }
-        .onMoveToSuperview {
-            self.content.pin(to: $0)
-            self.content.widthAnchor.constraint(equalTo: $0.widthAnchor).isActive = true
+        .onMoveToSuperview { scrollView in
+            self.content.pin(to: scrollView)
+            self.content.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
         }
     
     var bottomConstraint: NSLayoutConstraint?

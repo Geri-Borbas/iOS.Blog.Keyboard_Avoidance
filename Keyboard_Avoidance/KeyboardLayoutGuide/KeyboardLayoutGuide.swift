@@ -10,29 +10,7 @@ import UIKit
 import Combine
 
 
-@available(iOS, obsoleted: 15)
-extension UIView {
-    
-    struct Keys {
-        static var keyboardLayoutGuide: UInt8 = 0
-    }
-    
-    var keyboardLayoutGuide: UIKeyboardLayoutGuide {
-        get {
-            if let instance = objc_getAssociatedObject(self, &Keys.keyboardLayoutGuide) as? UIKeyboardLayoutGuide {
-                return instance
-            } else {
-                let instance = UIKeyboardLayoutGuide(in: self)
-                objc_setAssociatedObject(self, &Keys.keyboardLayoutGuide, instance, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-                return instance
-            }
-        }
-    }
-}
-
-
-@available(iOS, obsoleted: 15)
-class UIKeyboardLayoutGuide: UILayoutGuide {
+class KeyboardLayoutGuide: UILayoutGuide {
     
     var topConstraint: NSLayoutConstraint?
     var bottomConstraint: NSLayoutConstraint?
@@ -49,9 +27,9 @@ class UIKeyboardLayoutGuide: UILayoutGuide {
         
         // Pin to the edges.
         self.topConstraint = self.topAnchor.constraint(equalTo: view.topAnchor, constant: view.layoutMarginsGuide.layoutFrame.size.height)
-        self.bottomConstraint = self.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
-        self.leftConstraint = self.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0)
-        self.rightConstraint = self.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0)
+        self.bottomConstraint = self.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        self.leftConstraint = self.leftAnchor.constraint(equalTo: view.leftAnchor)
+        self.rightConstraint = self.rightAnchor.constraint(equalTo: view.rightAnchor)
         topConstraint?.isActive = true
         bottomConstraint?.isActive = true
         leftConstraint?.isActive = true
@@ -96,7 +74,7 @@ class UIKeyboardLayoutGuide: UILayoutGuide {
     func keyboardWillChangeFrame(_ notification: Notification) {
         
         // Unwrap window.
-        guard let window = UIApplication.shared.windows.first else { return }
+        guard let window = UIApplication.firstWindow else { return }
         
         // Layout using keyboard animation data.
         animate(
@@ -161,92 +139,5 @@ class UIKeyboardLayoutGuide: UILayoutGuide {
         
         // Invoke layout.
         owningView.layoutIfNeeded()
-    }
-}
-
-
-fileprivate extension Notification {
-    
-    var keyboardFrameBegin: CGRect {
-        if let userInfo = self.userInfo,
-           let value = userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue {
-            return value.cgRectValue
-        } else {
-            return CGRect.zero
-        }
-    }
-    
-    var keyboardFrameEnd: CGRect {
-        if let userInfo = self.userInfo,
-           let value = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            return value.cgRectValue
-        } else {
-            return CGRect.zero
-        }
-    }
-    
-    var animationDuration: Double {
-        if let userInfo = self.userInfo,
-           let value = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? NSNumber {
-            return value.doubleValue
-        } else {
-            return 0
-        }
-    }
-    
-    var animationCurveOptions: UIView.AnimationOptions {
-        if let userInfo = self.userInfo,
-           let value = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber {
-            return UIView.AnimationOptions(rawValue: value.uintValue << 16)
-        } else {
-            return []
-        }
-    }
-    
-    func log() {
-        print("keyboardFrameBegin: \(keyboardFrameBegin)")
-        print("keyboardFrameEnd: \(keyboardFrameEnd)")
-        print("animationCurveOptions: \(animationCurveOptions)")
-        print("animationDuration: \(animationDuration)")
-    }
-}
-
-
-extension UIView.AnimationCurve {
-    
-    var animationOption: UIView.AnimationOptions {
-        switch self {
-        case .easeInOut:
-            return .curveEaseInOut
-        case .easeIn:
-            return .curveEaseIn
-        case .easeOut:
-            return .curveEaseOut
-        case .linear:
-            return .curveLinear
-        @unknown default:
-            return .curveLinear
-        }
-    }
-}
-
-
-extension CGSize {
-    
-    var rect: CGRect {
-        .init(origin: .zero, size: self)
-    }
-}
-
-
-extension CGRect {
-    
-    var bottomEdgeRect: CGRect {
-        .init(
-            x: minX,
-            y: maxY,
-            width: size.width,
-            height: .zero
-        )
     }
 }
