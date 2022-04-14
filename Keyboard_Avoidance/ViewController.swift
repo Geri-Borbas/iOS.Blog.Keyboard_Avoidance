@@ -33,9 +33,7 @@ class ViewController: UIViewController {
         .vertical(spacing: 5)
         .views(
             HeaderView()
-                .onMoveToSuperview {
-                    $0.set(height: 480)
-                },
+                .withFixedHeight,
             emailTextField,
             givenNameTextField,
             familyNameTextField,

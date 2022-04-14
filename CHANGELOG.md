@@ -2,14 +2,19 @@
 
 * Doing
 
-    + SwiftUI testbed
     + `UIView.safeAreaInsetsDidChange()` swizzling
 
-* 0.0.30
+* 0.0.35
+
+    + Added `SwiftUIView`
+    + 
+
+* 0.0.30 - 0.0.31
 
     + Added `UIApplication.firstWindow`
     + Added `HeaderView.fixedHeight`
     + Extracted extensions
+    + Grouping
 
 * 0.0.25
 

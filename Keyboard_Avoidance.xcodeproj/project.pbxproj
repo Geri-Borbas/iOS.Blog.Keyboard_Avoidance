@@ -31,6 +31,7 @@
 		55A00E86280839B400718A56 /* AnimationCurve+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A00E85280839B400718A56 /* AnimationCurve+Extensions.swift */; };
 		55A00E88280839F100718A56 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A00E87280839F100718A56 /* CGRect+Extensions.swift */; };
 		55A00E8A28083A9100718A56 /* UIApplication+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A00E8928083A9100718A56 /* UIApplication+Extensions.swift */; };
+		55A00E8E28084C5C00718A56 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A00E8D28084C5C00718A56 /* SwiftUIView.swift */; };
 		55C02C0C27F90FFF00BA6322 /* WireframeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */; };
 		55F090822801BB7800210D36 /* Withable in Frameworks */ = {isa = PBXBuildFile; productRef = 55F090812801BB7800210D36 /* Withable */; };
 		55F090842802029D00210D36 /* UIView+Speed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F090832802029C00210D36 /* UIView+Speed.swift */; };
@@ -64,6 +65,7 @@
 		55A00E85280839B400718A56 /* AnimationCurve+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimationCurve+Extensions.swift"; sourceTree = "<group>"; };
 		55A00E87280839F100718A56 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
 		55A00E8928083A9100718A56 /* UIApplication+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extensions.swift"; sourceTree = "<group>"; };
+		55A00E8D28084C5C00718A56 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WireframeViewController.swift; sourceTree = "<group>"; };
 		55F090832802029C00210D36 /* UIView+Speed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Speed.swift"; sourceTree = "<group>"; };
 		55FD29DA27FD966B00AC7BCB /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				558057192804B96700DBFA69 /* WrapperScrollViewController.swift */,
 				55C02C0B27F90FFF00BA6322 /* WireframeViewController.swift */,
 				5512A85327F8D3D700B0829D /* WireframeView.swift */,
+				55A00E8D28084C5C00718A56 /* SwiftUIView.swift */,
 				55A00E8C2808493E00718A56 /* Extensions */,
 			);
 			path = Prototypes;
@@ -268,6 +271,7 @@
 				5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */,
 				5580571A2804B96700DBFA69 /* WrapperScrollViewController.swift in Sources */,
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,
+				55A00E8E28084C5C00718A56 /* SwiftUIView.swift in Sources */,
 				5522D7192800CAEF008150D2 /* TextFieldDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,
 				55F090842802029D00210D36 /* UIView+Speed.swift in Sources */,
