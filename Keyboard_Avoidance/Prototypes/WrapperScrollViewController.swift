@@ -32,8 +32,7 @@ class WrapperScrollViewController: UIViewController {
     lazy var content = UIStackView()
         .vertical(spacing: UI.spacing)
         .views(
-            HeaderView()
-                .withFixedHeight,
+            HeaderView(),
             emailTextField,
             givenNameTextField,
             familyNameTextField,
@@ -68,5 +67,13 @@ class WrapperScrollViewController: UIViewController {
         ).isActive = true
         body.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor, constant: UI.padding).isActive = true
         body.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor, constant: -UI.padding).isActive = true
+    }
+    
+    override func viewSafeAreaInsetsDidChange() {
+        super.viewSafeAreaInsetsDidChange()
+        content.heightAnchor.constraint(
+            equalTo: view.safeAreaLayoutGuide.heightAnchor,
+            constant: -UI.padding * 2
+        ).isActive = true
     }
 }

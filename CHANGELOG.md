@@ -2,7 +2,18 @@
 
 * Doing
 
+    + Blog
+        + Screencap from `WrappedScrollViewController` 
+        + Hero video
+        + Hero Twitter image
+        + Excerpt
+
+* 0.0.40
+
     + `UIView.safeAreaInsetsDidChange()` swizzling
+        + Added `NSObject+Swizzle`
+        + Added `UIView+OnSafeAreaInsetsDidChange`
+        + Readjust `KeyboardLayoutGuide` when safe area insets changed
 
 * 0.0.38
 
@@ -22,7 +33,7 @@
 
 * 0.0.25
 
-    + Added `WrapperScrollViewController` (added to `ViewController` as well)
+    + Added `WrappedScrollViewController` (added to `ViewController` as well)
 
 * 0.0.23
     

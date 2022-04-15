@@ -48,16 +48,6 @@ class KeyboardLayoutGuide: UILayoutGuide {
             .publisher(for: UIResponder.keyboardWillHideNotification)
             .sink { [unowned self] _ in self.isKeyboardShown = false }
             .store(in: &subscribers)
-        NotificationCenter.default
-            .publisher(for: UIWindow.didBecomeKeyNotification)
-            .sink { [unowned self] notification in
-                // TODO: This should be replaced with swizzling `safeAreaInsetsDidChange()`.
-                // More at https://developer.apple.com/documentation/uikit/uiview/2891104-safeareainsetsdidchange
-                if let window = notification.object as? UIWindow {
-                    self.layout(for: window.bounds.bottomEdgeRect, in: window)
-                }
-            }
-            .store(in: &subscribers)
         OrientationListenerViewController.shared.viewWillTransition
             .sink { [unowned self] size, coordinator in
                 if self.isKeyboardShown == false {
@@ -65,6 +55,12 @@ class KeyboardLayoutGuide: UILayoutGuide {
                 }
             }
             .store(in: &subscribers)
+        view.onSafeAreaInsetsDidChange = { [weak self] in
+            if let self = self,
+               let window = UIApplication.firstWindow {
+                self.layout(for: window.bounds.bottomEdgeRect, in: window)
+            }
+        }
     }
     
     required init?(coder: NSCoder) {

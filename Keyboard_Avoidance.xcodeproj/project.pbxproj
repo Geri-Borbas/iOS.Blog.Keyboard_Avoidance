@@ -22,6 +22,8 @@
 		555F90D527F855990075798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555F90D427F855990075798F /* ViewController.swift */; };
 		555F90DA27F855A20075798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 555F90D927F855A20075798F /* Assets.xcassets */; };
 		555F90DD27F855A20075798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 555F90DB27F855A20075798F /* LaunchScreen.storyboard */; };
+		556477D1280975A200BCF866 /* NSObject+Swizzle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556477D0280975A200BCF866 /* NSObject+Swizzle.swift */; };
+		556477D328097A4500BCF866 /* UIView+OnSafeAreaInsetsDidChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556477D228097A4500BCF866 /* UIView+OnSafeAreaInsetsDidChange.swift */; };
 		5580571A2804B96700DBFA69 /* WrapperScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558057192804B96700DBFA69 /* WrapperScrollViewController.swift */; };
 		558C663F27FE64FF000A5736 /* ScrollToResponderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */; };
 		558C664627FE6554000A5736 /* UIButton+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558C664127FE6551000A5736 /* UIButton+Styles.swift */; };
@@ -57,6 +59,8 @@
 		555F90DC27F855A20075798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		555F90DE27F855A20075798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		555F90E427F868060075798F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		556477D0280975A200BCF866 /* NSObject+Swizzle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Swizzle.swift"; sourceTree = "<group>"; };
+		556477D228097A4500BCF866 /* UIView+OnSafeAreaInsetsDidChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+OnSafeAreaInsetsDidChange.swift"; sourceTree = "<group>"; };
 		558057192804B96700DBFA69 /* WrapperScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapperScrollViewController.swift; sourceTree = "<group>"; };
 		558C663E27FE64FF000A5736 /* ScrollToResponderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollToResponderViewController.swift; sourceTree = "<group>"; };
 		558C664127FE6551000A5736 /* UIButton+Styles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Styles.swift"; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				55A00E8128082F9200718A56 /* UIView+KeyboardLayoutGuide.swift */,
+				556477D228097A4500BCF866 /* UIView+OnSafeAreaInsetsDidChange.swift */,
 				5512A85127F8C77C00B0829D /* KeyboardLayoutGuide.swift */,
 				55134BB027FA1E5E003CD09C /* OrientationListenerViewController.swift */,
 				55A00E8B2808491900718A56 /* Extensions */,
@@ -162,6 +167,7 @@
 				55A00E87280839F100718A56 /* CGRect+Extensions.swift */,
 				55A00E85280839B400718A56 /* AnimationCurve+Extensions.swift */,
 				55A00E832808395600718A56 /* Notification+Extensions.swift */,
+				556477D0280975A200BCF866 /* NSObject+Swizzle.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -271,7 +277,9 @@
 				5522D7172800C07A008150D2 /* UIFont+Extensions.swift in Sources */,
 				5580571A2804B96700DBFA69 /* WrapperScrollViewController.swift in Sources */,
 				555F90D127F855990075798F /* AppDelegate.swift in Sources */,
+				556477D328097A4500BCF866 /* UIView+OnSafeAreaInsetsDidChange.swift in Sources */,
 				55A00E8E28084C5C00718A56 /* SwiftUIView.swift in Sources */,
+				556477D1280975A200BCF866 /* NSObject+Swizzle.swift in Sources */,
 				5522D7192800CAEF008150D2 /* TextFieldDelegate.swift in Sources */,
 				555F90D327F855990075798F /* SceneDelegate.swift in Sources */,
 				55F090842802029D00210D36 /* UIView+Speed.swift in Sources */,
