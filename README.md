@@ -1,6 +1,6 @@
 # Keyboard Avoidance
 
-Keyboard avoidance with a single line of code. Animate to text fields (or any responder), swipe down keyboard dismissal for free. See the corresponding article for more [Keyboard Avoidance in two lines of code], also on detail how to backport `keyboardLayoutGuide` to iOS 13 and iOS 14.
+Keyboard avoidance with a single line of code. Animate to text fields (or any responder), swipe down keyboard dismissal for free. See the corresponding article for more [Keyboard Avoidance with a single line of code], also on detail how to backport `keyboardLayoutGuide` to iOS 13 and iOS 14.
 
 https://user-images.githubusercontent.com/1779614/163884587-c11f4953-2f30-4b46-b36f-1fac9b32a017.mp4
 
@@ -87,5 +87,5 @@ class ViewController: UIViewController {
 > Licensed under the [**MIT License**](https://en.wikipedia.org/wiki/MIT_License).
 
 
-[Keyboard Avoidance in two lines of code]: https://blog.eppz.eu/keyboard-avoidance/
+[Keyboard Avoidance with a single line of code]: https://blog.eppz.eu/keyboard-avoidance/
 [`Withable`]: https://github.com/Geri-Borbas/iOS.Package.Withable
