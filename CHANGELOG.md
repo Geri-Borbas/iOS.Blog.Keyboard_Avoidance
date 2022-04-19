@@ -3,10 +3,15 @@
 * Doing
 
     + Blog
-        + Screencap from `WrappedScrollViewController` 
-        + Hero video
         + Hero Twitter image
         + Excerpt
+
+* 0.0.50
+
+    + Added 
+    + Blog
+        + Screencap from `WrappedScrollViewController`
+        + Hero video
 
 * 0.0.40
 
@@ -14,6 +19,7 @@
         + Added `NSObject+Swizzle`
         + Added `UIView+OnSafeAreaInsetsDidChange`
         + Readjust `KeyboardLayoutGuide` when safe area insets changed
+        + Removed `HeaderView.withFixedHeight`
 
 * 0.0.38
 

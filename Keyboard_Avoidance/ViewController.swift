@@ -44,6 +44,7 @@ class ViewController: UIViewController {
         .with {
             $0.addSubview(content)
             $0.keyboardDismissMode = .onDrag
+            $0.showsVerticalScrollIndicator = false
             $0.bounces = false
         }
         .onMoveToSuperview {

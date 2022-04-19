@@ -102,6 +102,9 @@ extension UITextField {
                 $0.nextTextField = nextTextField
                 $0.returnKeyType = .next
             }
+            
+            // Slow-motion cursor blinking speed (for screencaps).
+            // $0.textInputView.layer.speed = 0.1
         }
         .onMoveToSuperview {
             $0.set(height: UI.itemHeight)
