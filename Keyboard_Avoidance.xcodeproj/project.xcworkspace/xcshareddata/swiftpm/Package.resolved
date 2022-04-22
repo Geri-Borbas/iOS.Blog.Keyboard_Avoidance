@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "KeyboardLayoutGuide",
+        "repositoryURL": "https://github.com/Geri-Borbas/iOS.Package.KeyboardLayoutGuide",
+        "state": {
+          "branch": "main",
+          "revision": "20efa9d6ad15c7cf2cf342c8b24e9261511c105f",
+          "version": null
+        }
+      },
+      {
         "package": "Withable",
         "repositoryURL": "https://github.com/Geri-Borbas/iOS.Package.Withable",
         "state": {

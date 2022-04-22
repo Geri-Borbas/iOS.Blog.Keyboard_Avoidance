@@ -107,3 +107,15 @@ class KeyboardNotificationsViewController: UIViewController {
         )
     }
 }
+
+
+fileprivate extension UIApplication {
+    
+    static var firstWindow: UIWindow? {
+        if #available(iOS 15.0, *) {
+            return (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first
+        } else {
+            return UIApplication.shared.windows.first
+        }
+    }
+}

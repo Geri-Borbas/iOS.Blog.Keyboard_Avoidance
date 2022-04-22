@@ -1,14 +1,15 @@
 # CHANGELOG
 
-* Doing
+* 0.0.60
 
+    + Added `KeyboardLayoutGuide` package
     + Blog
         + Hero Twitter image
+        + Featured image
         + Excerpt
 
 * 0.0.50
 
-    + Added 
     + Blog
         + Screencap from `WrappedScrollViewController`
         + Hero video
